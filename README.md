@@ -4,27 +4,25 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 1. Download this project as a zip file and unzip it to get the Web App Folder.
 
-2. Install npm into the folder. Right click the folder and select "Open in Terminal" and type the following:
+2. Open a new terminal at the project folder. This can be done by either right clicking on the project folder and selecting "Open in terminal"("Services > New Terminal at folder" for MacOS) or by typing "cmd" in your File Locator Bar (Recommended method for Windows)
+
+![Example Image](https://raw.githubusercontent.com/AllStar-Nate/task-manager-nextjs/main/public/Media/Example.jpeg)
+
+3. Install npm into the folder. Type the following:
 
 ```bash
-#Recommended
 npm install
 ```
 
-3. Run the development server. Right click the folder and select "Open in Terminal"(Or type 'cmd' in the file explorer ) and type the following:
+4. Run the development server. Type the following:
 
 ```bash
-#Recommended
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
+#Recommended
+npm install
 
-4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 In order to run the app on your phone use the network IP provided rather than localhost.
 
