@@ -6,7 +6,7 @@
 
 
 
-
+    const sideMenu = document.querySelector('#nav-menu')
 let calendars = Array.from(document.querySelectorAll('.calendar'))
 
 
@@ -28,6 +28,7 @@ slides.forEach((slide, index) => {
     //Touch events
 
         slide.addEventListener('touchstart', (event) => {
+            
             if (calendar.letDrag) {
                 slide.classList.add('selected');
                 setTimeout(() => {
@@ -41,6 +42,7 @@ slides.forEach((slide, index) => {
         // Mouse events
         slide.addEventListener('mousedown', (event) => {
             if (calendar.letDrag) {
+                sideMenu.classList.remove('active');
                 slide.classList.add('selected')
                 touchStart(index)(event);
             }
@@ -61,7 +63,7 @@ function touchStart(index){
 
     
     return function(event) {
-        
+            sideMenu.classList.remove('active');
             dropdownMenu.classList.remove("show");
             hideResults();
         
@@ -103,6 +105,7 @@ function touchEnd(){
 }
 
 function touchMove(event) {
+    sideMenu.classList.remove('active');
     if (isDragging){
         if(!calendar.letDrag){
             slider.classList.remove('grabbing')  

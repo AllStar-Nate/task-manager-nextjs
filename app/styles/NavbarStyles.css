@@ -522,10 +522,11 @@ a:visited {
 }
 
 .results-container::-webkit-scrollbar {
+    -webkit-appearance: none;
+    -moz-appearance:none;
+    appearance: none;
     width: 8px;
 }
-
-
 .results-container::-webkit-scrollbar-track { 
     margin-bottom: 1.3rem;
     border-radius: 30px;
