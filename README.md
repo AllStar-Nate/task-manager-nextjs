@@ -10,7 +10,8 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 #Recommended
 npm install
 ```
-3. Run the development server. Right click the folder and select "Open in Terminal" and type the following:
+
+3. Run the development server. Right click the folder and select "Open in Terminal"(Or type 'cmd' in the file explorer ) and type the following:
 
 ```bash
 #Recommended
