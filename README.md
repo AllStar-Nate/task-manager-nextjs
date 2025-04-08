@@ -1,6 +1,6 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started Changes Test!
+## Getting Started
 
 First, run the development server. Right click the folder and select "Open in Terminal" and type the following:
 
