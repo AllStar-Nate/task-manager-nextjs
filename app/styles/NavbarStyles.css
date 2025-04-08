@@ -23,7 +23,7 @@ a:visited {
     --height: height;
     width: 100%;
     display: flex;
-    position: sticky;
+    position: static;
     top:0;
     justify-content: center;
     align-items: center;
@@ -553,7 +553,7 @@ a:visited {
     padding-top: 5px;
 }
 
-#results-list li {
+#results-list a {
     display: flex;
     flex-wrap: row;
     text-align: left; 
@@ -566,9 +566,11 @@ a:visited {
     background-color: transparent;
     border-radius: 0px 30px 30px 0px;
     transition: background 0.14s;
+    text-decoration: none;
+    color: inherit;
 }
 
-#results-list li:hover {
+#results-list a:hover {
 background-color: rgba(144,144,144, 0.219);
 }
 

@@ -11,6 +11,7 @@ import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { faChartSimple } from '@fortawesome/free-solid-svg-icons';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import Script from 'next/script';
 
 // import "../styles/NavbarStyles.css";
@@ -22,7 +23,19 @@ export default function NavBar() {
     const location = usePathname();
 
     const hideArrow = location === "/";
+    useEffect(() => {
 
+        const icons = document.createElement('script');
+        icons.src = "https://kit.fontawesome.com/a3081c073c.js";
+        icons.crossOrigin = "anonymous";
+        icons.async= "true";
+        document.body.appendChild(icons);
+        
+        return () => {
+            document.body.removeChild(icons);
+        }     
+    }, []);
+    
     return (
         <>
 

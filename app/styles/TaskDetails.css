@@ -1,4 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:wght@300&display=swap');
+@keyframes blink_input_opacity_to_prevent_scrolling_when_focus {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  .input--focused {
+      animation: blink_input_opacity_to_prevent_scrolling_when_focus 0.01s;
+  }
+
 .container-bar{
     display: flex;
     flex-direction: column;
@@ -124,7 +133,7 @@ h1 {
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
     scrollbar-width: none;  /* Firefox */
     box-sizing: border-box;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .task-details {
@@ -163,7 +172,8 @@ h1 {
 
 
 #task-title-input {
-    width: 65%;
+    touch-action: none;
+    width: 100%;
     padding-top: 10px;
     padding-left: 0px;
     margin-left: 0px;
@@ -173,7 +183,7 @@ h1 {
     border: 0px solid #8a8a8a;
     background-color: transparent;
     border-radius: 3px;
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-family: Monsterrat, Impact, 'Impact', Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: rgb(59, 144, 241);
     justify-content: center;
@@ -181,6 +191,9 @@ h1 {
     height: auto;
     text-align: left;
     transition: color 0.2s, transform 0.2s;
+}
+#task-title-input--focused {
+    animation: blink_input_opacity_to_prevent_scrolling_when_focus 0.01s;
 }
 
 #task-title-input:hover {
@@ -197,6 +210,7 @@ h1 {
 
 
 #description-input {
+    touch-action: none;
     width: 90%;
     max-width: 90%;
     min-width: 90%;
@@ -209,7 +223,7 @@ h1 {
     border: 0px solid #8a8a8a;
     background-color: transparent;
     border-radius: 3px;
-    font-size: 2.1rem;
+    font-size: 1.4rem;
     font-family: Impact, 'Impact', Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: rgb(59, 144, 241);
     justify-content: left;
@@ -219,7 +233,9 @@ h1 {
     display: flex;
     transition: color 0.2s, transform 0.2s;
 }
-
+#description-input--focused {
+    animation: blink_input_opacity_to_prevent_scrolling_when_focus 0.01s;
+}
 #description-input:hover {
     color: rgb(47, 182, 255);
     transform: scale(1.02);
@@ -240,6 +256,7 @@ h1 {
 }
 .due-date-container input[type="date"] {
     width: fit-content;
+    
     min-width: max-content;
     padding-left: 0px;
     margin: 0px;
@@ -247,7 +264,7 @@ h1 {
     border: 0px solid #8a8a8a;
     background-color: transparent;
     border-radius: 3px;
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-family: Monsterrat, Impact, 'Impact', Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: rgba(59, 154, 241, 1);
     height: 100%;
@@ -302,7 +319,7 @@ h1 {
     border: 0px solid #8a8a8a;
     background: #262626;
     border-radius: 30px;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-family: Monsterrat, Impact, 'Impact', Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     justify-content: flex-end;
     align-items: center;
@@ -337,7 +354,7 @@ h1 {
     border: 0px solid #8a8a8a;
     background: #262626;
     border-radius: 30px;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-family: Monsterrat, Impact, 'Impact', Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     justify-content: left;
     align-items: center;
@@ -373,7 +390,7 @@ h1 {
     border: 0px solid #8a8a8a;
     background: #262626;
     border-radius: 30px;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-family: Monsterrat, Impact, 'Impact', Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     justify-content: left;
     align-items: center;
@@ -492,7 +509,7 @@ select.general-maintenance {
     align-self: left;
     margin-top: 10px;
     flex-direction: column;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
 }
 
 #task-audio {
@@ -516,7 +533,7 @@ select.general-maintenance {
     align-self: left;
     margin-top: 10px;
     flex-direction: column;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
 }
 #task-video {
     display: flex;
@@ -538,7 +555,7 @@ select.general-maintenance {
     padding: 10px 0px;
     border: none;
     border-radius: 3px;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     justify-content: center;
     align-items: center;
     align-self: center;
@@ -580,7 +597,7 @@ select.general-maintenance {
     padding-inline: 1.5rem;
     min-width: max-content;
     display: flex;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     border-radius: 30px;
     background-color: #262626;
     justify-content: center;

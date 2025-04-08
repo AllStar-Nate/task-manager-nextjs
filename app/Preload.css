@@ -18,9 +18,11 @@
    html, body{
        font-family: Impact, 'Impact', Haettenschweiler, 'Arial Narrow Bold', sans-serif;
        height: 100vh;
+       height: 100dvh;
        width: 100vw;
        overflow: hidden;
        overscroll-behavior: none;
+       -webkit-overflow-scrolling: none;
        background-color: rgb(0, 0, 0);
        color: rgba(59, 154, 241, 1);
    }

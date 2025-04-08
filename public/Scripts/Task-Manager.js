@@ -465,7 +465,8 @@ function createCompleteCalendar() {
           const taskKey = taskBar.Details.key;
           const dueDate = taskDetails[taskKey].dueDate;
           const startDate = taskDetails[taskKey].startDate
-          const newTaskItem = document.createElement('div');
+          const newTaskItem = document.createElement('a');
+          newTaskItem.href = "/details";
           newTaskItem.className = 'task-item';
           newTaskItem.id = taskKey;
           newTaskItem.Details = taskDetails[taskKey];
@@ -480,7 +481,6 @@ function createCompleteCalendar() {
 
           newTaskItem.onclick = (event) => {;
               showTaskDetails(newTaskItem.Details);
-              window.location.href = 'Task-Details.html';
           };
              
           
@@ -521,7 +521,8 @@ function createPriorityCalendar() {
          
           const dueDate = taskDetails[taskBar].dueDate;
           const startDate = taskDetails[taskBar].startDate;
-          const newTaskItem = document.createElement('div');
+          const newTaskItem = document.createElement('a');
+          newTaskItem.href = "/details";
           newTaskItem.className = 'task-item';
           newTaskItem.id = taskBar;
           newTaskItem.Details = taskDetails[taskBar];
@@ -537,7 +538,6 @@ function createPriorityCalendar() {
 
           newTaskItem.onclick = (event) => {;
               showTaskDetails(newTaskItem.Details);
-              window.location.href = 'Task-Details.html';
           };
              
           

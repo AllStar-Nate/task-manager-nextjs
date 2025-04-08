@@ -56,7 +56,8 @@ function searchCalendar() {
                 if (categoryButton.value !== 'All' && tasks[task].category !== categoryButton.value) {
                     return;
                 }
-                const listItem = document.createElement('li'); 
+                const listItem = document.createElement('a');
+                listItem.href = "/details";; 
                 listItem.classList.add(tasks[task].category.replace(" ", "-").toLowerCase());
                 const icon = document.createElement('i');
                 icon.className = "fa-solid fa-magnifying-glass";
@@ -69,7 +70,6 @@ function searchCalendar() {
                   
                 listItem.onclick = (event) => {;
                     showTaskDetails(tasks[task]);
-                    window.location.href = 'Task-Details.html';
                     resultsList.parentElement.style.display = 'none';
                 };
                 

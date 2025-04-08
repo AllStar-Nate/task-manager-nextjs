@@ -71,7 +71,8 @@
     today = new Date();
     currentdate = formatDate(new Date(today.getFullYear(), today.getMonth(), today.getDate()), 0);
     
-    document.getElementById('task-header').scrollIntoView;
+  
+    
 
     function showTaskDetails(selectedTask){ 
         if (selectedTask) {
