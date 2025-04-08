@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:wght@300&display=swap');
+
+.container-bar{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: sticky;
+    top:0;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 0px #444444;
+    border-radius: 20px 20px 0px 0px;
+    border-bottom: 3px solid #444444;
+    border-top: 3px #444444;
+    border-left: 3px #444444;
+    border-right: 3px #444444;
+    border-radius: 0px 0px 20px 20px;
+    box-sizing: border-box;
+    background-color: #0b0a0a;
+    padding: 0px 0px 10px 0px;
+    filter: drop-shadow(0rem 0.5rem 0.75rem rgb(4, 4, 4, 0.8));
+}
+.chart{
+    height: 70vh;
+    margin: 1rem 0;
+    width: 100vw;
+    justify-content: center;
+    justify-self: center;
+    align-self: center;
+    align-items: center;
+    background-color: #262626;
+    border-radius: 20px;
+    border: 2px solid #444444;
+   }

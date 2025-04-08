@@ -1,0 +1,586 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:wght@300&display=swap');
+
+
+.arrow-container{
+
+    width: 100vw;
+    max-width: 100vw;
+    min-width: 100vw;
+    font-size: 2.5rem;
+    margin: 0px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    border-bottom: 3px solid #444444;
+    border-top: 3px #444444;
+    border-left: 3px #444444;
+    border-right: 3px #444444;
+    border-radius: 0px 0px 30px 30px;
+    transition: border-radius 0.2s ease-out, padding 0.2s ease, transform 0.1s;
+    user-select: none;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    background: #0b0a0a;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    z-index: 1;
+    filter: drop-shadow(0rem 0.5rem 0.75rem rgb(4, 4, 4, 0.8));
+    -webkit-filter: drop-shadow(0rem 0.5rem 0.75rem rgb(4, 4, 4, 0.8));
+    
+}
+.grabbing #complete-calendar-slide .arrow-container { 
+    padding-top: 10px;
+    border-radius: 0px 0px 0px 30px;
+}
+
+.grabbing #calendar-slide .arrow-container { 
+    padding-top: 10px;
+    border-radius: 0px 0px 0px 0px;
+}
+
+.grabbing #priority-calendar-slide .arrow-container { 
+    padding-top: 10px;
+    border-radius: 0px 0px 30px 0px;
+}
+
+.arrow-container .title{
+    justify-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    text-wrap: nowrap;
+   
+}
+
+#priority-calendar-slide .arrow-container .title{
+    justify-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-wrap: nowrap;
+    font-size: 2.4rem;
+   
+   
+}
+.arrow-container #right, 
+.arrow-container #left{ 
+    transition: all 0.3s ease;
+    opacity: 0;
+   
+}
+.arrow-container #right{
+    padding-right: 5px;
+    margin-left: auto;
+    margin-right: 10px; 
+    justify-self: flex-end;
+}
+.arrow-container #left{
+    padding-left: 5px;
+    margin-right: auto; 
+    margin-left: 10px; 
+    justify-self: flex-start;
+}
+
+
+#arrow-container #right svg, 
+#arrow-container #left svg{ 
+    width: 2.4rem;
+    height: 2.4rem;
+}
+.selected#complete-calendar-slide #arrow-container #right, 
+.selected#calendar-slide #arrow-container #right{ 
+    opacity: 100;
+    margin-right: 0px; 
+}
+.selected#priority-calendar-slide #arrow-container #left, 
+.selected#calendar-slide #arrow-container #left{ 
+    opacity: 100;
+    margin-left: 0px; 
+}
+
+.selected#priority-calendar-slide #arrow-container #right { 
+    margin-right: 0px; 
+}
+
+.selected#complete-calendar-slide #arrow-container #left{ 
+    margin-left: 0px; 
+}
+
+
+.slider-container {
+    display: inline-flex;
+    overflow: hidden;
+    will-change: transform;
+    transform: translateX(0);
+    cursor: grab;
+    transition: all 0.3s ease-out;
+    justify-content: center;
+
+ 
+}
+
+.slide {
+    width: 100vw;
+    max-width: 100vw;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    user-select: none;
+
+}
+
+
+.grabbing {
+    transition: 0.05s;
+    cursor: grabbing;
+
+}
+
+
+
+.calendar-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: bottom;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    max-height: 100%; 
+    padding-bottom: 10px;
+
+    border-radius: -11px 1px 0 0;
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+    overflow-y: scroll;
+    box-sizing: content-box;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: auto;
+    background-color: transparent;
+    user-select: none;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    z-index: 0;
+}
+
+.calendar-container::-webkit-scrollbar {
+    display: none;   
+}
+.calendar-container.no-scroll  {
+    scroll-behavior: none;
+    -webkit-overflow-scrolling: none;
+    overflow: hidden;
+}
+
+#complete-calendar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+    width: 90%;
+    height: fit-content;
+    margin: 10px 0 40px 0;
+    background-color: transparent;
+    border: 0;
+    border-radius: 5px;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    font-size: 2em;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+#calendar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    height: fit-content;
+    margin: 10px 0 40px 0;
+    cursor: default;
+    background-color: transparent;
+    border: 0;
+    border-radius: 5px;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+#priority-calendar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: fit-content;
+    margin: 10px 0 40px 0;
+    background-color: transparent;
+    border: 0;
+    border-radius: 5px;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    font-size: 2em;
+    text-align: center;
+    cursor: default;
+}
+.critical {
+    color: red;
+}
+
+.urgent {
+    color: rgb(255, 98, 0);
+}
+
+.high-priority {
+    color: #ffaa01;
+}
+
+.calendar-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-width: 150px;
+    padding: 20px 0px;
+    margin: 5px 0;
+    background-color: #1f1f1f;
+    border: 1px solid #1f1f1f;
+    border-radius: 20px;
+    font-size: 2em;
+    text-align: center;
+    transition: background 0.2s ease-out, transform 0.2s ease-out, margin 0.5s ease, height 0.01s ease, border 0.2s ease;
+    -webkit-transition:  background 0.2s ease-out, transform 0.2s ease-out, margin 0.5s ease, height 0.01s ease, border 0.2s ease;
+    user-select: none;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.calendar-bar.Open {
+    border: 2px solid rgba(59, 154, 241, 1);
+    margin: 3vh 0;
+    transform: scale(1.085);
+}
+
+.calendar-bar:hover {
+    background: #222222;
+    cursor: pointer;
+    transform: scale(1.085);
+}
+
+.calendar-bar.Open .task-list{
+    opacity:100;
+    max-height: 0;
+}
+.calendar-bar.Open .task-list.drop-zone{
+    overflow: visible;
+}
+
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0px 5px;
+    user-select: none;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    height: 100%;
+    opacity: 1;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    -webkit-transition: max-height 0.35s ease, opacity 0.5s;
+}
+
+
+
+.task-item {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 5px 0px;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 100%; 
+    max-width: 100%;
+    padding: 10px;
+    background: #2b2a2a;
+    border-radius: 40px;
+    text-decoration: none;
+    transition: transform 0.2s ease-out;
+    height: fit-content;
+    line-height: 1;
+    
+   
+}
+
+#complete-calendar .task-item {
+    border: 2px solid rgba(64, 255, 0, 0.503);
+}
+
+.task-item.critical {
+    border: 2px solid rgba(255, 0, 0, 0.62);
+}
+
+.task-item.urgent {
+    border: 2px solid rgba(255, 98, 0, 0.596);;
+}
+    
+
+.task-item.high-priority {
+    border: 2px solid #ffaa01a0;
+}
+
+.task-item .task{
+    background: linear-gradient(135deg, rgba(59, 154, 241, 1) 45%, rgba(122, 15, 215, 1) 70%);
+    width: max-content;
+    justify-self: flex-start;
+    align-self: center;
+    display: flex;
+    font-size: 1.4rem;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.task-item:hover {
+    transform: scale(1.02);
+}
+
+
+.label-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-self: flex-end;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+@media only screen and (max-width: 375px) {
+    p.completed {
+        background-color: rgba(17, 114, 0, 0.473);
+        color: rgb(26, 174, 0);
+        padding: 7px 5px;
+        width: min-content;
+        height: flex;
+        margin-left: 3px;
+        border: 2px solid;
+        box-sizing: border-box;
+        border-radius: 30px;
+        max-width: 30vw;
+        font-size: 0.5em;
+        align-self: center;
+        line-height: 105%;
+    } 
+}
+
+@media only screen and (min-width: 375px) {
+    p.completed {
+        background-color: rgba(17, 114, 0, 0.473);
+        color: rgb(26, 174, 0);
+        padding: 7px 10px;
+        width: min-content;
+        height: flex;
+        margin-left: 5px;
+        border: 2px solid;
+        box-sizing: border-box;
+        border-radius: 30px;
+        max-width: 30vw;
+        font-size: 0.5em;
+        align-self: center;
+        line-height: 105%;
+    }
+}
+
+
+p.overdue {
+    background-color: rgba(255, 0, 0, 0.253);
+    color: rgb(255, 0, 0);
+    padding: 7px 10px;
+    max-width: min-content;
+    height: flex;
+    margin-left: 5px;
+    border: 2px solid;
+    box-sizing: border-box;
+    border-radius: 30px;
+    font-size: 0.5em;
+    align-self: center;
+    line-height: 105%;
+}
+
+p.date {
+    background-color: rgba(64, 255, 0, 0.339);
+    color: rgb(64, 255, 0);
+    padding: 3px 10px;
+    width: max-content;
+    margin-left: 5px;
+    border: 2px rgba(64, 255, 0, 0.644);
+    box-sizing: border-box;
+    border-radius: 30px;
+    font-size: 0.5em;
+    align-self: center;
+    line-height: 105%;
+}
+p.due-date {
+    background-color: rgb(73, 73, 73);
+    color: rgb(255, 106, 0);
+    padding: 3px 10px;
+    width: max-content;
+    margin-left: 5px;
+    border: 2px rgba(64, 255, 0, 0.644);
+    box-sizing: border-box;
+    border-radius: 30px;
+    font-size: 0.5em;
+    align-self: center;
+    line-height: 105%;
+}
+
+p.grass-maintenance {
+    background-color: rgba(68, 216, 0, 0.31);
+    color: rgb(68, 216, 0);
+    padding: 3px 10px;
+    margin-left: 5px;
+    width: min-content;
+    border: 2px solid rgba(68, 216, 0, 0.31);
+    box-sizing: border-box;
+    border-radius: 30px;
+    font-size: 0.4em;
+    align-self: center;
+    justify-content: center;
+    line-height: 105%;
+}
+p.plant-maintenance {
+    background-color: rgba(0, 174, 174, 0.295);
+    color: rgb(0, 174, 174);
+    padding: 3px 10px;
+    margin-left: 5px;
+    width: min-content;
+    border: 2px solid rgba(0, 174, 174, 0.295);
+    box-sizing: border-box;
+    border-radius: 30px;
+    font-size: 0.4em;
+    align-self: center;
+    line-height: 105%;
+    justify-content: center;
+}
+
+p.site-clearing {
+    background-color: rgba(225, 217, 0, 0.336);
+    color: rgb(225, 217, 0);
+    padding: 3px 10px;
+    margin-left: 5px;
+    width: min-content;
+    border: 2px solid rgba(225, 217, 0, 0.336);
+    box-sizing: border-box;
+    border-radius: 30px;
+    font-size: 0.4em;
+    align-self: center;
+    line-height: 105%;
+    justify-content: center;
+}
+
+p.new-landscaping {
+    background-color: rgba(255, 183, 0, 0.203);
+    color: rgb(255, 183, 0);
+    padding: 3px 10px;
+    width: min-content;
+    border: 2px solid rgba(255, 183, 0, 0.203);
+    box-sizing: border-box;
+    border-radius: 30px;
+    font-size: 0.4em;
+    align-self: center;
+    line-height: 105%;
+}
+
+p.general-maintenance {
+    background-color: rgba(6, 122, 255, 0.381);
+    color: rgb(6, 122, 255);
+    padding: 3px 10px;
+    
+    width: min-content;
+    border: 2px solid  rgba(6, 122, 255, 0.381);
+    box-sizing: border-box;
+    border-radius: 30px;
+    font-size: 0.4em;
+    align-self: center;
+    line-height: 105%;
+}
+
+p.critical{
+    background-color: rgba(255, 0, 0, 0.253);
+    color: red;
+    padding: 7px 10px;
+    width: min-content;
+    border: 2px solid rgba(255, 0, 0, 0.253);
+    box-sizing: border-box;
+    border-radius: 30px;
+    font-size: 0.5em;
+    align-self: center;
+    line-height: 105%;
+    justify-content: center;
+}
+
+p.urgent{
+    background-color: rgba(255, 98, 0, 0.383);
+    color: rgb(255, 98, 0);
+    padding: 7px 10px;
+    width: min-content;
+    border: 2px solid rgba(255, 98, 0, 0.383);
+    box-sizing: border-box;
+    border-radius: 30px;
+    font-size: 0.5em;
+    align-self: center;
+    line-height: 105%;
+    justify-content: center;
+}
+
+p.high-priority{
+    background-color: #ffaa0164;
+    color: #ffaa01;
+    padding: 7px 10px;
+    width: max-content;
+    border: 2px solid #ffaa0164;
+    box-sizing: border-box;
+    border-radius: 30px;
+    font-size: 0.5em;
+    align-self: center;
+    line-height: 105%;
+    justify-content: center;
+}
+
+
+
+.dragging{
+    border: 2px dashed #8b8b8b;
+    opacity: 1;
+    z-index: 1000;
+    -webkit-user-drag: element;
+    
+}
+/*.over{
+    
+}
+
+/*/
