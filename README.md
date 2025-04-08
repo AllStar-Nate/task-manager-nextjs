@@ -2,7 +2,9 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-First, run the development server. Right click the folder and select "Open in Terminal" and type the following:
+1. Download this project as a zip file and unzip it to get the Web App Folder.
+
+2. Run the development server. Right click the folder and select "Open in Terminal" and type the following:
 
 ```bash
 #Recommended
@@ -15,7 +17,7 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 In order to run the app on your phone use the network IP provided rather than localhost.
 
