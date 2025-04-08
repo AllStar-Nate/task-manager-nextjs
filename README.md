@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-1. Download this project as a zip file and unzip it to get the Web App Folder.
+1. Download the latest release of this project and unzip the project folder.
 
 2. Open a new terminal at the project folder. This can be done by either right clicking on the project folder and selecting "Open in terminal"("Services > New Terminal at folder" for MacOS) or by typing "cmd" in your File Locator Bar (Recommended method for Windows)
 
@@ -19,8 +19,6 @@ npm install
 ```bash
 npm run dev
 ```
-#Recommended
-npm install
 
 5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
