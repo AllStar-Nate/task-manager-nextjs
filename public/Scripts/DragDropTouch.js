@@ -1,6 +1,7 @@
+(function () {
 let DragDropTouch;
 (function (DragDropTouch_1) {
-    'use strict';
+    'use client';
     /**
      * Object used to hold the data that is being dragged during drag and drop operations.
      *
@@ -478,3 +479,6 @@ let DragDropTouch;
 
     DragDropTouch_1.DragDropTouch = DragDropTouch;
 })(DragDropTouch || (DragDropTouch = {}));
+
+
+})();

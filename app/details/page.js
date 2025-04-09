@@ -10,24 +10,27 @@ import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { faChartSimple } from '@fortawesome/free-solid-svg-icons';
 import { use } from 'react';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import "../styles/TaskDetails.css";
 
 export default function Details() {
+    const [isClient, setIsClient] = useState(false);
     useEffect(() => {
+        setIsClient(true);
         const script = document.createElement('script');
         script.src = "/Scripts/Task-Details.js";
-        script.async = false;
+        script.async = true;
         document.body.appendChild(script);
         const mapScript = document.createElement('script');
         mapScript.src = "/Scripts/Maps.js";
-        mapScript.async = false;
+        mapScript.async = true;
         document.body.appendChild(mapScript);
         return () => {
             document.body.removeChild(script);
             document.body.removeChild(mapScript);
         }     
     }, []);
+    if (!isClient) return null;
         return (
             
             <>

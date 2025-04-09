@@ -1,6 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:wght@300&display=swap');
 
+html, body{
+    font-family: Impact, 'Impact', Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    height: 99vh;
+    width: 100vw;
+    overflow: hidden;
+    overscroll-behavior: none;
+    background-color: rgb(0, 0, 0);
+    color: rgba(59, 154, 241, 1);
+}
 
+body{
+    display: flex;
+    flex-direction: column;
+}
 .arrow-container{
 
     width: 100vw;
@@ -332,13 +345,12 @@
     transition: transform 0.2s ease-out;
     height: fit-content;
     line-height: 1;
-    
-   
 }
 
 #complete-calendar .task-item {
     border: 2px solid rgba(64, 255, 0, 0.503);
 }
+
 
 .task-item.critical {
     border: 2px solid rgba(255, 0, 0, 0.62);

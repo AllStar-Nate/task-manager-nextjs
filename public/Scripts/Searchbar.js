@@ -1,3 +1,4 @@
+(function () {
 document.addEventListener('DOMContentLoaded', function() {
     const searchContainer = document.querySelector('.search-bar-container');
     const resultsContainer = document.querySelector('.results-container');
@@ -208,3 +209,6 @@ changeStatus.call(statusButton)
 
 
     
+
+})();
+

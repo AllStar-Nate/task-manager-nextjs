@@ -20,12 +20,16 @@ let isDragging = false,
 setPositionByIndex()
 slides.forEach((slide, index) => {
     const calendar = slide.querySelector('.calendar')
-    calendar.letDrag = true;
+    
+    if (calendar) {
+        calendar.letDrag = true;
     calendar.addEventListener('touchstart', (e) => calendar.letDrag = false);
     calendar.addEventListener('mousedown', (e) => calendar.letDrag = false);
     calendar.addEventListener('touchend', (e) => calendar.letDrag = true);
     calendar.addEventListener('mouseup', (e) => calendar.letDrag = true);
     //Touch events
+    }
+    
 
         slide.addEventListener('touchstart', (event) => {
             
@@ -191,6 +195,29 @@ function formatContainer(){
     
      
   } 
+
+const resultsContainer = document.querySelector('.results-container');
+const searchContainer = document.getElementById('search-bar-container');
+const nav = document.getElementById('nav-container');
+const searchBar = document.getElementById('search-bar');
+const searchResults = document.getElementById('search-results');
+const resultsList = document.getElementById('results-list');
+const closeSearch = document.getElementById('close-search');
+function hideResults(){
+    
+    resultsList.innerHTML = '';
+    resultsList.parentElement.style.display = 'none';
+    resultsList.parentElement.style.display = 'none';
+    searchResults.style.removeProperty('border-bottom-left-radius');
+    searchResults.style.removeProperty('border-bottom-right-radius');
+    searchContainer.style.removeProperty('border-bottom-color');
+    searchContainer.style.removeProperty('border-bottom');
+    nav.style.removeProperty('border-bottom-left-radius');
+    nav.style.removeProperty('border-bottom-right-radius');
+    searchContainer.style.removeProperty('border-bottom-left-radius');
+    searchContainer.style.removeProperty('border-bottom-right-radius');
+    closeSearch.style.display = 'none';
+}
 let resizeTimeout;
 window.addEventListener('resize', () => {
     clearTimeout(resizeTimeout);

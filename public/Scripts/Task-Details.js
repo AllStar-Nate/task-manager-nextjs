@@ -1,12 +1,12 @@
 (function () {
     
-    currentTaskIndex = 0;
+    let currentTaskIndex = 0;
     let taskKey;
     let selectedTask = JSON.parse(localStorage.getItem('selectedTask')) || false;
     console.log(selectedTask);
     let listOfTasks = JSON.parse(localStorage.getItem('listOfTasks')) || {};
-    tasks = JSON.parse(localStorage.getItem('tasks')) || {};
-    taskDetails = JSON.parse(localStorage.getItem('taskDetails')) || {};
+    let tasks = JSON.parse(localStorage.getItem('tasks')) || {};
+    let taskDetails = JSON.parse(localStorage.getItem('taskDetails')) || {};
     console.log(tasks);
     console.log(taskDetails);
     
@@ -68,8 +68,8 @@
         }
         return false;
       };
-    today = new Date();
-    currentdate = formatDate(new Date(today.getFullYear(), today.getMonth(), today.getDate()), 0);
+    let today = new Date();
+    let currentdate = formatDate(new Date(today.getFullYear(), today.getMonth(), today.getDate()), 0);
     
   
     

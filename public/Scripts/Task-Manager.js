@@ -468,13 +468,15 @@ function createCompleteCalendar() {
           const newTaskItem = document.createElement('a');
           newTaskItem.href = "/details";
           newTaskItem.className = 'task-item';
+
+
           newTaskItem.id = taskKey;
           newTaskItem.Details = taskDetails[taskKey];
           newTaskItem.classList.add(newTaskItem.Details.category.replace(" ", "-").toLowerCase());
           const task = document.createElement('p');
           task.className = 'task';
           newTaskItem.appendChild(task);
-       
+          newTaskItem.draggable = "false"; // Prevent dragging
           
           task.textContent = taskDetails[taskKey].title;
 
@@ -504,6 +506,7 @@ function createCompleteCalendar() {
           completeCalendar.appendChild(newTaskItem);
       }
   });
+  
 }
 
 function createPriorityCalendar() {
@@ -513,6 +516,7 @@ function createPriorityCalendar() {
     let keys  = Object.keys(taskDetails);
   const priorityCalendar = document.getElementById('priority-calendar');
   priorityCalendar.innerHTML = "";
+  priorityCalendar.removeEventListener
   keys.forEach((taskBar) => {
       if (taskDetails[taskBar].priority === "High Priority" && taskDetails[taskBar].status !== "Completed" || 
         taskDetails[taskBar].priority === "Critical" && taskDetails[taskBar].status !== "Completed" || 
@@ -521,8 +525,7 @@ function createPriorityCalendar() {
          
           const dueDate = taskDetails[taskBar].dueDate;
           const startDate = taskDetails[taskBar].startDate;
-          const newTaskItem = document.createElement('a');
-          newTaskItem.href = "/details";
+          const newTaskItem = document.createElement('div');
           newTaskItem.className = 'task-item';
           newTaskItem.id = taskBar;
           newTaskItem.Details = taskDetails[taskBar];
@@ -538,6 +541,7 @@ function createPriorityCalendar() {
 
           newTaskItem.onclick = (event) => {;
               showTaskDetails(newTaskItem.Details);
+              window.location.href = "/details";
           };
              
           

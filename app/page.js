@@ -6,21 +6,6 @@ import "./styles/TaskStyles.css";
 
 import { useEffect } from 'react';
 export default function Home() {
-   useEffect(() => {
-
-          const script = document.createElement('script');
-          script.src = "/Scripts/Task-Manager.js";
-          document.body.appendChild(script);
-          const slidingScript = document.createElement('script');
-          slidingScript.src = "/Scripts/Sliding.js";
-
-          document.body.appendChild(slidingScript);
-          
-          return () => {
-              document.body.removeChild(script);
-              document.body.removeChild(slidingScript);
-          }     
-      }, []);
   return (
     <>
               <Head>
@@ -115,12 +100,10 @@ export default function Home() {
                     <div className="calendar" id="priority-calendar" />
                 </div>
                 </div>
-            </div>
-            
-            
-          
-            <Script src="Scripts/DragDropTouch.js" strategy="afterInteractive" />
-           
+            </div>     
+            <Script src="/Scripts/Task-Manager.js" strategy="lazyOnload" />
+            <Script src="/Scripts/Sliding.js" strategy="lazyOnload" />
+            <Script src="/Scripts/DragDropTouch.js" strategy="lazyOnload" />   
         </>
   );
 }

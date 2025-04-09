@@ -2,7 +2,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'next/link';
 import Head from 'next/head';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
@@ -14,28 +14,45 @@ import { faChartSimple } from '@fortawesome/free-solid-svg-icons';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import Script from 'next/script';
 
+
 // import "../styles/NavbarStyles.css";
 
 
 
 export default function NavBar() {
+    const [isClient, setIsClient] = useState(false);
     
     const location = usePathname();
 
     const hideArrow = location === "/";
     useEffect(() => {
-
+        setIsClient(true);
         const icons = document.createElement('script');
         icons.src = "https://kit.fontawesome.com/a3081c073c.js";
         icons.crossOrigin = "anonymous";
-        icons.async= "true";
+
         document.body.appendChild(icons);
-        
+        const SearchBar = document.createElement('script');
+        SearchBar.src="/Scripts/Searchbar.js";
+  
+        document.body.appendChild(SearchBar);
+        const DropDown = document.createElement('script');
+        DropDown.src="/Scripts/DropDown.js";
+
+        document.body.appendChild(DropDown);
+        const Sidebar = document.createElement('script');
+        Sidebar.src="/Scripts/Sidebar.js";
+        document.body.appendChild(Sidebar);
+
         return () => {
             document.body.removeChild(icons);
+            document.body.removeChild(SearchBar);
+            document.body.removeChild(DropDown);
+            document.body.removeChild(Sidebar);
         }     
     }, []);
-    
+ 
+    if (!isClient) return null;
     return (
         <>
 
@@ -147,10 +164,6 @@ export default function NavBar() {
                 <hr />
                 </div>
             </nav>
-
-            <Script src="/Scripts/Searchbar.js" strategy="afterInteractive"/>
-            <Script src="/Scripts/DropDown.js" strategy="afterInteractive"/>
-            <Script src="/Scripts/Sidebar.js" strategy="afterInteractive" async="true" />
         </>
     );
 }

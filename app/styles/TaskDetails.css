@@ -1,13 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:wght@300&display=swap');
-@keyframes blink_input_opacity_to_prevent_scrolling_when_focus {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
-  
-  .input--focused {
-      animation: blink_input_opacity_to_prevent_scrolling_when_focus 0.01s;
-  }
 
+html, body{
+    font-family: Impact, 'Impact', Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    height: 100lvh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+    color: rgba(59, 154, 241, 1);
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
 .container-bar{
     display: flex;
     flex-direction: column;
@@ -163,7 +168,7 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: left;
-    touch-action: none;
+
 }
 
 #task-title{
@@ -256,7 +261,6 @@ h1 {
 }
 .due-date-container input[type="date"] {
     width: fit-content;
-    
     min-width: max-content;
     padding-left: 0px;
     margin: 0px;
@@ -264,7 +268,7 @@ h1 {
     border: 0px solid #8a8a8a;
     background-color: transparent;
     border-radius: 3px;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     font-family: Monsterrat, Impact, 'Impact', Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: rgba(59, 154, 241, 1);
     height: 100%;
@@ -319,7 +323,7 @@ h1 {
     border: 0px solid #8a8a8a;
     background: #262626;
     border-radius: 30px;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-family: Monsterrat, Impact, 'Impact', Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     justify-content: flex-end;
     align-items: center;
@@ -354,7 +358,7 @@ h1 {
     border: 0px solid #8a8a8a;
     background: #262626;
     border-radius: 30px;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-family: Monsterrat, Impact, 'Impact', Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     justify-content: left;
     align-items: center;
@@ -390,7 +394,7 @@ h1 {
     border: 0px solid #8a8a8a;
     background: #262626;
     border-radius: 30px;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-family: Monsterrat, Impact, 'Impact', Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     justify-content: left;
     align-items: center;

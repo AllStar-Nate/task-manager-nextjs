@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
 import NavBar from "./NavBar";
 import "./styles/NavbarStyles.css";
+
 import PreloadEffect from "./PreloadEffect";
 import "./Preload.css";
 const geistSans = Geist({
