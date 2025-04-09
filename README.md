@@ -1,26 +1,27 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
-1. If you haven't already, download node.js using this link [https://nodejs.org/en/](https://nodejs.org/en/) 
-1. Download the latest release of this project and unzip the project folder.
+1. If you haven't already, download node.js using this link [https://nodejs.org/en/download](https://nodejs.org/en/download) 
 
-2. Open a new terminal at the project folder. This can be done by either right clicking on the project folder and selecting "Open in terminal"("Services > New Terminal at folder" for MacOS) or by typing "cmd" in your File Locator Bar (Recommended method for Windows)
+2. Download the latest release of this project and unzip the project folder.
+
+3. Open a new terminal at the project folder. This can be done by either right clicking on the project folder and selecting "Open in terminal"("Services > New Terminal at folder" for MacOS) or by typing "cmd" in your File Locator Bar (Recommended method for Windows)
 
 ![Example Image](https://raw.githubusercontent.com/AllStar-Nate/task-manager-nextjs/main/public/Media/Example.jpeg)
 
-3. Install npm into the folder. Type the following:
+4. Install npm into the folder. Type the following:
 
 ```bash
 npm install
 ```
 
-4. Run the development server. Type the following:
+5. Run the development server. Type the following:
 
 ```bash
 npm run dev
 ```
 
-5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+6. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 In order to run the app on your phone use the network IP provided rather than localhost.
 
