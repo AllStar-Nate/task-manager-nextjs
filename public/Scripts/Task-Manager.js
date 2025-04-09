@@ -465,8 +465,8 @@ function createCompleteCalendar() {
           const taskKey = taskBar.Details.key;
           const dueDate = taskDetails[taskKey].dueDate;
           const startDate = taskDetails[taskKey].startDate
-          const newTaskItem = document.createElement('a');
-          newTaskItem.href = "/details";
+          const newTaskItem = document.createElement('div');
+         
           newTaskItem.className = 'task-item';
 
 
@@ -483,6 +483,7 @@ function createCompleteCalendar() {
 
           newTaskItem.onclick = (event) => {;
               showTaskDetails(newTaskItem.Details);
+              window.location.href = "/details";
           };
              
           
