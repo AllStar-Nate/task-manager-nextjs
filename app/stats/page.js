@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 export default function Stats() {
   useEffect(() => {
     const plot = document.createElement('script');
-    plot.src = "https://cdn.plot.ly/plotly-latest.min.js";
+    plot.src= "https://cdn.plot.ly/plotly-2.27.0.min.js";
     plot.async = false;
     document.body.appendChild(plot);
     const chart = document.createElement('script');
