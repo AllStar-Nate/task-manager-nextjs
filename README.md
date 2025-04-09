@@ -1,7 +1,7 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
-
+1. If you haven't already, download node.js using this link [https://nodejs.org/en/](https://nodejs.org/en/) 
 1. Download the latest release of this project and unzip the project folder.
 
 2. Open a new terminal at the project folder. This can be done by either right clicking on the project folder and selecting "Open in terminal"("Services > New Terminal at folder" for MacOS) or by typing "cmd" in your File Locator Bar (Recommended method for Windows)
