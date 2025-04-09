@@ -45,7 +45,7 @@ export default function Home() {
                 </div>
                 </div>
                 <div className="slide" id="calendar-slide">
-                <div className="arrow-container" id="arrow-container" style={{filter: "drop-shadow(0rem 0.5rem 0.75rem rgb(4, 4, 4, 0.8))", WebkitFilter: "drop-shadow(0rem 0.5rem 0.75rem rgb(4, 4, 4, 0.8))"}}>
+                <div className="arrow-container" id="arrow-container">
                     <span id="left">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" width="171.4913" height="182.78572" viewBox="0,0,171.4913,182.78572">
                         <g transform="translate(-154.25435,-88.60714)">

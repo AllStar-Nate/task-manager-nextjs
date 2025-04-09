@@ -8,6 +8,21 @@ const searchResults = document.getElementById('search-results');
 const resultsList = document.getElementById('results-list');
 const closeSearch = document.getElementById('close-search');
 
+function hideResults(){
+    
+  resultsList.innerHTML = '';
+  resultsList.parentElement.style.display = 'none';
+  resultsList.parentElement.style.display = 'none';
+  searchResults.style.removeProperty('border-bottom-left-radius');
+  searchResults.style.removeProperty('border-bottom-right-radius');
+  searchContainer.style.removeProperty('border-bottom-color');
+  searchContainer.style.removeProperty('border-bottom');
+  nav.style.removeProperty('border-bottom-left-radius');
+  nav.style.removeProperty('border-bottom-right-radius');
+  searchContainer.style.removeProperty('border-bottom-left-radius');
+  searchContainer.style.removeProperty('border-bottom-right-radius');
+  closeSearch.style.display = 'none';
+}
 
 const toggleDropdown = function () {
     dropdownMenu.classList.toggle("show");

@@ -21,7 +21,7 @@ npm install
 npm run dev
 ```
 
-6. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+6. Open [http://localhost:3000](http://localhost:3000)  with your browser to see the result.
 
 In order to run the app on your phone use the network IP provided rather than localhost.
 
