@@ -1,0 +1,13 @@
+Date: 2024-11-24
+Midday Care Report:
+--------------------
+Leo (ID: 144, Kennel: 10, Times Fed: 1 IsOnMeds: Y, Is Medicated: Y)
+
+Daisy (ID: 092, Kennel: 18, Times Fed: 1 IsOnMeds: Y, Is Medicated: Y)
+
+Fluffy (ID: 100, Kennel: 21, Times Fed: 1 IsOnMeds: Y, Is Medicated: Y)
+
+Ruffles (ID: 203, Kennel: 35, Times Fed: 1 IsOnMeds: Y, Is Medicated: Y)
+
+Lady (ID: 176, Kennel: 36, Times Fed: 1 IsOnMeds: Y, Is Medicated: Y)
+

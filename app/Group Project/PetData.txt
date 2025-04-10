@@ -1,0 +1,10 @@
+100	Fluffy	21	2	Y
+091	Rufus	31	1	N
+247	Joe	22	1	N
+092	Daisy	18	1	Y
+144	Leo	10	2	Y
+203	Ruffles	35	1	Y
+176	Lady	36	1	Y
+177	Max	17	1	N
+149	Maxine	12	2	N
+158	Neo	26	1	N

@@ -172,6 +172,7 @@ function createCalendar(daysAfter, daysBefore) {
       NumofTasks = Rand(1, 5);
       if (i - daysBefore === 0) {
           calendarBar.style.border = '3px solid #8a8a8a';
+		  calendarBar.classList.add('today');
       }
 
       const taskList = document.createElement('div');
@@ -217,9 +218,9 @@ function createCalendar(daysAfter, daysBefore) {
               let status;
               let dateCompleted = "";
               if (compareDates(taskDueDate, currentdate)) {
-                  status = statusOptions[Math.floor(Math.random() * 3)]; // Randomly select from all three options
+                  status = statusOptions[Rand(2, 3)]; // Randomly select from all three options
               } else {
-                  status = statusOptions[Math.floor(Math.random() * 2)]; // Randomly select from the first two options
+                  status = statusOptions[Rand(1, 2)]; // Randomly select from the first two options
               }
                   
               if (status == "Completed") {
@@ -345,6 +346,7 @@ function createCalendar(daysAfter, daysBefore) {
       }           
   localStorage.setItem('taskDetails', JSON.stringify(taskDetails));
   localStorage.setItem('tasks', JSON.stringify(tasks));
+  document.querySelector('.today').scrollIntoView({ behavior: 'auto', block: 'start'});
 }
 
 let openBar = null;
@@ -466,17 +468,14 @@ function createCompleteCalendar() {
           const dueDate = taskDetails[taskKey].dueDate;
           const startDate = taskDetails[taskKey].startDate
           const newTaskItem = document.createElement('div');
-         
           newTaskItem.className = 'task-item';
-
-
           newTaskItem.id = taskKey;
           newTaskItem.Details = taskDetails[taskKey];
           newTaskItem.classList.add(newTaskItem.Details.category.replace(" ", "-").toLowerCase());
           const task = document.createElement('p');
           task.className = 'task';
           newTaskItem.appendChild(task);
-          newTaskItem.draggable = "false"; // Prevent dragging
+          
           
           task.textContent = taskDetails[taskKey].title;
 
