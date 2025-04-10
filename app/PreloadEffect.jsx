@@ -11,11 +11,13 @@ export default function PreloadEffect() {
         requestAnimationFrame(() => {
           // Optional: delay to ensure any async stuff finishes
           setTimeout(() => {
+
             document.body.classList.remove("preload");
             console.log("Preload removed");
           }, 200); // tweak delay as needed (e.g., 100–300ms)
         });
       });
+
   }, [pathname]); // run this logic every time the route changes
 
   return null;

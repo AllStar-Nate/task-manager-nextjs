@@ -6,7 +6,6 @@ html, body{
     font-family: Impact, 'Impact', Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     height: 100vh;
     width: 100vw;
-    overflow: hidden;
     background: #0b0a0a;
     color: rgba(59, 154, 241, 1);
 }

@@ -69,8 +69,8 @@ export default function Details() {
                     </div>
                     <div className="select-container">
                         <p><label id="task-priority"><span>Priority:</span>
-                            <select id="task-priority-select" defaultValue={"Select your option"}>
-                            <option value="Select your option" disabled>Select your option</option>
+                            <select id="task-priority-select" defaultValue={""}>
+							<option value="" disabled>Select your option</option>
                             <option id="critical" value="Critical">Critical </option>
                             <option id="urgent" value="Urgent">Urgent</option>
                             <option id="high-priority" value="High Priority">High Priority</option>
@@ -79,8 +79,8 @@ export default function Details() {
                             </select>
                         </label></p>
                         <p><label id="task-category"><span>Category:</span>
-                            <select id="category-select" defaultValue={"Select your option"}>
-                            <option value="Select your option" disabled>Select your option</option>
+                            <select id="category-select" defaultValue={""}>
+							<option value="" disabled>Select your option</option>
                             <option id="new-landscaping" value="New Landscaping">New Landscaping</option>
                             <option id="site-clearing" value="Site Clearing">Site Clearing</option>
                             <option id="high-priority" value="Plant Maintenance">Plant Maintenance</option>
@@ -89,8 +89,8 @@ export default function Details() {
                             </select>
                         </label></p>
                         <p><label id="task-status"><span>Status:</span>
-                            <select id="task-status-select" defaultValue={"Select your option"}>
-                            <option value="Select your option" disabled>Select your option</option>
+                            <select id="task-status-select" defaultValue={""}>
+							<option value="" disabled>Select your option</option>
                             <option value="Pending">Pending</option>
                             <option value="In-Progress">In-Progress</option>
                             <option value="Completed">Completed</option>

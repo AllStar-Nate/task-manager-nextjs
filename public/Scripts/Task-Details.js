@@ -1,3 +1,5 @@
+
+
 (function () {
     
     let currentTaskIndex = 0;
@@ -232,15 +234,33 @@
     
     
     document.getElementById('save-task-button').onclick = () => {
-        if (document.getElementById('task-title-input').value === "" || 
-        document.getElementById('task-start-date-input').value =="" || 
-        document.getElementById('task-due-date-input').value == "" || 
-        document.getElementById('task-priority-select').value == "" || 
-        document.getElementById('task-status-select').value == "" ||
-        document.getElementById('category-select').value == ""){
+        if (document.getElementById('task-title-input').value === "") {
+			alert("Title cannot be empty");
+			return;
+		}
+		
+        if (document.getElementById('task-start-date-input').value ==""){
+			alert("Start date cannot be empty");
+			return;
+		}
+		
+        if (document.getElementById('task-due-date-input').value == ""){
+			alert("Due date cannot be empty");
+			return;
+		}  
+        if (document.getElementById('task-priority-select').value == ""){
+			alert("Priority level cannot be empty");
+			return;
+		}
+        if (document.getElementById('task-status-select').value == ""){
+			alert("Status cannot be empty");
+			return;
+		}
+        if (document.getElementById('category-select').value == ""){
             alert("Critical Fields Cannot Be empty!");
             return;
-        }    
+        }  
+	 
         
     
         const taskTitleInput = document.getElementById('task-title-input').value;

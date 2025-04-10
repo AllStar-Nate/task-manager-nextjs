@@ -621,6 +621,7 @@ createCalendar(daysAfter, daysBefore);
 createCompleteCalendar();
 createPriorityCalendar();
 formatContainer();
+document.querySelector('html').scrollTop = 0;
 
 function recreateTasksObject() {
   const calendarBars = document.querySelectorAll('.calendar-bar');
@@ -654,6 +655,8 @@ function recreateTasksObject() {
   createCompleteCalendar();
   createPriorityCalendar();
   formatContainer();
+  document.querySelector('html').scrollTop = 0;
+
   
 }
 

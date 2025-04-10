@@ -71,4 +71,11 @@
         }
       });
 
+	  document.getElementById('new-task-button').addEventListener('click', function(){
+        sideMenu.classList.remove('active');
+                    localStorage.removeItem('selectedTask');
+                    localStorage.removeItem('listOfTasks');
+        
+      });
+
 })();

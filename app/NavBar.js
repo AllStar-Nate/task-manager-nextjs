@@ -56,7 +56,7 @@ export default function NavBar() {
     return (
         <>
 
-        <div id="navbar">
+        <div id="navbar" className="navbar">
 
                 <div className="menu-bars" id="show-menu" style={{display: hideArrow ? "block" : "none" }}>
                     <FontAwesomeIcon icon={faBars} id="Bars" />

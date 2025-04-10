@@ -1,10 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:wght@300&display=swap');
 html, body{
+	position: fixed;
+	top: 0;
     font-family: Impact, 'Impact', Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     height: 100vh;
     width: 100vw;
     overflow: hidden;
     overscroll-behavior: none;
+
     background-color: rgb(0, 0, 0);
     color: rgba(59, 154, 241, 1);
 }
