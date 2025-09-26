@@ -218,9 +218,11 @@ function createCalendar(daysAfter, daysBefore) {
               let status;
               let dateCompleted = "";
               if (compareDates(taskDueDate, currentdate)) {
-                  status = statusOptions[Rand(2, 3)]; // Randomly select from all three options
+                  status = statusOptions[Rand(1, 2)]; // Randomly select from all three options
+				  console.log(status);
               } else {
-                  status = statusOptions[Rand(1, 2)]; // Randomly select from the first two options
+                  status = statusOptions[Rand(0, 1)]; // Randomly select from the first two options
+				  
               }
                   
               if (status == "Completed") {

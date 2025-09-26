@@ -1,7 +1,7 @@
 {
   "name": "task-manager-nextjs",
   "version": "0.1.0",
-  "homepage": "https://AllStar-Nate.github.io/Task-Manager-v3",
+  "homepage": "https://github.com/AllStar-Nate/task-manager-nextjs",
   "private": true,
   "scripts": {
     "predeploy": "npm run build",
